@@ -42,6 +42,8 @@ function valRegistration(req,res,next){
 
 // name and last name
 app.post('/register',valRegistration, (req, res) => {
+    const  timestamp = new Date().toISOString()
+    console.log("User added successfully "+  timestamp);
     res.status(201).json({ message: 'User registered successfully!' });
 });
 
